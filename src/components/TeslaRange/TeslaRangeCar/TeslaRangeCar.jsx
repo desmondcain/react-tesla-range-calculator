@@ -7,7 +7,7 @@ class TeslaRangeCar extends Component {
 
   render() {
     return (
-      <img src={teslaCarImg} className="tesla-range-car" alt="Tesla Car" />
+      <img src={teslaCarImg} className="tesla-range-car" alt="Tesla Range Car" />
     );
   }
 }
