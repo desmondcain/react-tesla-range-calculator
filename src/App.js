@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import TeslaRange from './components/TeslaRange/TeslaRange';
+import reactLogo from './images/logo-react.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <div className="app">
+        <div className="app-header">
+          <img src={reactLogo} className="app-logo" alt="React Logo" />
+          <h1>React Tesla Range Calculator</h1>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <TeslaRange />
       </div>
     );
   }
