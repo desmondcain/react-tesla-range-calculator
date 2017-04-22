@@ -2,6 +2,8 @@
 
 Why? Because car guy, with an Angular background, who is ramping up on React. Seemed fitting as a starter project. ¯\\\_(ツ)_/¯
 
+This project was mapped to React from Todd Motto's [Angular 2 Tesla Range Calculator Tutorial](https://toddmotto.com/building-tesla-range-calculator-angular-2-reactive-forms)
+
 # Deets
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
