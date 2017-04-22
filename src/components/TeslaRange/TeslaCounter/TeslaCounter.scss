@@ -1,0 +1,95 @@
+.tesla-counter {
+  float: left;
+  width: 230px;
+
+  &-title {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  &-container {
+    margin: 10px 0 0;
+    padding-right: 40px;
+
+    input[type=number] {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+
+  &-number {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 25px;
+    position: relative;
+
+    span {
+      font-size: 15px;
+      left: 35px;
+      position: absolute;
+      text-transform: uppercase;
+      top: 0;
+    }
+  }
+
+  &-item {
+    background-color: #f7f7f7;
+    background-position: 24.21053% 9px;
+    background-repeat: no-repeat;
+    background-size: 44px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    height: 65px;
+    margin: 0 8px 0 0;
+    padding: 18px 0 0 30px;
+    position: relative;
+    width: 100%;
+
+    &:focus {
+      background-color: #f2f2f2;
+      outline: none;
+    }
+  }
+
+  &-controls {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+
+    button {
+      background-size: 60%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border: 0;
+      color: #008dff;
+      cursor: pointer;
+      display: block;
+      outline: 0;
+      padding: 11px 0;
+      vertical-align: middle;
+      width: 30px;
+
+      &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.4;
+      }
+
+      &:first-child {
+        background-image: url(../../../images/counter/up.svg);
+        border-bottom: 1px solid #fff;
+      }
+
+      &:last-child {
+        background-image: url(../../../images/counter/down.svg);
+        border-top: 1px solid #ccc;
+      }
+    }
+  }
+}
