@@ -8,8 +8,8 @@ const TESLA_MODELS = ['60', '60D', '75', '75D', '90D', 'P100D']
 
 function calculateStats(settings, models) {
   return models.map(model => {
-    let {climate, speed, temperature, wheels} = settings
-    let miles = rangeModel[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature]
+    const { climate, speed, temperature, wheels } = settings
+    const miles = rangeModel[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature]
 
     return {
       model,
