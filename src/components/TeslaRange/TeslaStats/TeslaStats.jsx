@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { array } from 'prop-types';
 
+import './TeslaStats.css';
+
 class TeslaStats extends Component {
 
   render() {
