@@ -27,12 +27,13 @@ class TeslaRange extends Component {
   }
 
   render() {
-    let stats = this.stats
+    const defaultSettings = this.defaultSettings;
+    const stats = this.stats;
 
     return (
       <div>
         <TeslaRangeHeader />
-        <TeslaRangeCar />
+        <TeslaRangeCar wheelSize={defaultSettings.wheels} />
         <TeslaStats stats={stats} />
 
         <div className="disclaimer-range">
