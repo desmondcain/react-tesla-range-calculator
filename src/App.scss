@@ -16,6 +16,12 @@
   .app-intro {
     font-size: large;
   }
+
+  .row {
+    clear: both;
+    content: "";
+    display: block;
+  }
 }
 
 @keyframes app-logo-spin {
