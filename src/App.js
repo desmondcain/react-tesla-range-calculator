@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TeslaRange from './components/TeslaRange/TeslaRange';
+import TeslaRange from './components/TeslaRange';
 import reactLogo from './images/logo-react.svg';
 import './App.css';
 
