@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import { string, number } from 'prop-types';
 
 import './TeslaCounter.css'
 
-class TeslaConter extends Component {
+class TeslaCounter extends Component {
 
   render() {
-    let title = this.props.title
-    let value = this.props.value
-    let unit  = this.props.unit
+    let { max, min, step, title, unit } = this.props
+    let value;
 
     return (
       <div className="tesla-counter">
@@ -29,4 +29,13 @@ class TeslaConter extends Component {
   }
 }
 
-export default TeslaConter;
+TeslaCounter.propTypes = {
+  max: number.isRequired,
+  min: number.isRequired,
+  step: number.isRequired,
+  title: string.isRequired,
+  value: number.isRequired,
+  unit: string.isRequired,
+}
+
+export default TeslaCounter;
