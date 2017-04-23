@@ -3,6 +3,16 @@ import { PropTypes } from 'prop-types';
 
 import './TeslaCounter.css'
 
+const propTypes = {
+  max: PropTypes.number.isRequired,
+  min: PropTypes.number.isRequired,
+  step: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
+  unit: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
+}
+
 class TeslaCounter extends Component {
   constructor() {
     super()
@@ -47,14 +57,6 @@ class TeslaCounter extends Component {
   }
 }
 
-TeslaCounter.propTypes = {
-  max: PropTypes.number.isRequired,
-  min: PropTypes.number.isRequired,
-  step: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  value: PropTypes.number.isRequired,
-  unit: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired
-}
+TeslaCounter.propTypes = propTypes;
 
 export default TeslaCounter;

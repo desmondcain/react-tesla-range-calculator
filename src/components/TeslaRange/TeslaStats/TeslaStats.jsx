@@ -3,6 +3,10 @@ import { array } from 'prop-types';
 
 import './TeslaStats.css';
 
+const propTypes = {
+  stats: array.isRequired
+}
+
 class TeslaStats extends Component {
 
   render() {
@@ -23,8 +27,6 @@ class TeslaStats extends Component {
   }
 }
 
-TeslaStats.propTypes = {
-  stats: array.isRequired
-}
+TeslaStats.propTypes = propTypes;
 
 export default TeslaStats;

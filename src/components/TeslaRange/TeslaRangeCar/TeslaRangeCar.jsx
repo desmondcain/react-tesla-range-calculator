@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import { number } from 'prop-types';
+
+const propTypes = {
+  wheelSize: number.isRequired
+}
 
 import './TeslaRangeCar.css';
 
@@ -17,5 +22,7 @@ class TeslaRangeCar extends Component {
     );
   }
 }
+
+TeslaRangeCar.propTypes = propTypes;
 
 export default TeslaRangeCar;
