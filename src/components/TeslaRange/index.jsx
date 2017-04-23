@@ -9,29 +9,31 @@ import './index.css';
 
 const TESLA_MODELS = ['60', '60D', '75', '75D', '90D', 'P100D']
 
-function calculateStats(settings, models) {
-  return models.map(model => {
-    const { climate, speed, temperature, wheels } = settings
-    const miles = rangeModel[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature]
-
-    return {
-      model,
-      miles
-    };
-  })
-}
-
 class TeslaRange extends Component {
   constructor() {
     super()
 
+    this.calculateStats = this.calculateStats.bind(this)
+
     this.defaultSettings = { climate: true, speed: 55, temperature: 20, wheels: 19 }
-    this.stats = calculateStats(this.defaultSettings, TESLA_MODELS)
+    this.stats = this.calculateStats(this.defaultSettings, TESLA_MODELS)
+  }
+
+  calculateStats(settings, models) {
+    return models.map(model => {
+      const { climate, speed, temperature, wheels } = settings
+      const miles = rangeModel[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature]
+
+      return {
+        model,
+        miles
+      };
+    })
   }
 
   render() {
-    const defaultSettings = this.defaultSettings;
-    const stats = this.stats;
+    const defaultSettings = this.defaultSettings
+    const stats = this.stats
 
     return (
       <div className="tesla-range">
