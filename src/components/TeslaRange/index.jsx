@@ -63,7 +63,7 @@ class TeslaRange extends Component {
         <TeslaRangeCar wheelSize={settings.wheels} />
         <TeslaStats stats={stats} />
 
-        <div className="tesla-controlls">
+        <div className="tesla-controls">
           <TeslaCounter
             title="Speed"
             unit="mph"
@@ -74,7 +74,7 @@ class TeslaRange extends Component {
             onChange={this.handleChange('speed')}
           />
 
-          <div class="tesla-climate cf">
+          <div className="tesla-climate cf">
             <TeslaCounter
               title="Outside Temperature"
               unit="°"
@@ -88,10 +88,11 @@ class TeslaRange extends Component {
         </div>
 
         <div className="row">
-          <p className="notice-range">
-            The actual amount of range that you experience will vary based on your particular use conditions. See how particular use conditions may affect your range in our simulation model.
-            Vehicle range may vary depending on the vehicle settingsuration, battery age and condition, driving style and operating, environmental and climate conditions.
-          </p>
+          <div className="notice-range">
+            <p>The actual amount of range that you experience will vary based on your particular use conditions. See how particular use conditions may affect your range in our simulation model.</p>
+
+            <p>Vehicle range may vary depending on the vehicle settingsuration, battery age and condition, driving style and operating, environmental and climate conditions.</p>
+          </div>
         </div>
       </div>
     );
