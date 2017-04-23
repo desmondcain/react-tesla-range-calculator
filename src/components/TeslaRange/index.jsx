@@ -4,6 +4,7 @@ import TeslaRangeHeader from './TeslaRangeHeader/TeslaRangeHeader';
 import TeslaRangeCar from './TeslaRangeCar/TeslaRangeCar';
 import TeslaStats from './TeslaStats/TeslaStats';
 import TeslaCounter from './TeslaCounter/TeslaCounter';
+import TeslaWheels from './TeslaWheels/TeslaWheels';
 
 import './index.css';
 
@@ -85,6 +86,8 @@ class TeslaRange extends Component {
               onChange={this.handleChange('temperature')}
             />
           </div>
+
+          <TeslaWheels />
         </div>
 
         <div className="row">
