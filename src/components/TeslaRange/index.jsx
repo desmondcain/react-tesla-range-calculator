@@ -73,6 +73,18 @@ class TeslaRange extends Component {
             value={settings.speed}
             onChange={this.handleChange('speed')}
           />
+
+          <div class="tesla-climate cf">
+            <TeslaCounter
+              title="Outside Temperature"
+              unit="°"
+              step={10}
+              min={-10}
+              max={40}
+              value={settings.temperature}
+              onChange={this.handleChange('temperature')}
+            />
+          </div>
         </div>
 
         <div className="row">
