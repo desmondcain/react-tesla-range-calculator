@@ -1,8 +1,12 @@
 # React Tesla Range Calculator
 
-Why? Because car guy, with an Angular background, who is ramping up on React. Seemed fitting as a starter project. ¯\\\_(ツ)_/¯
+React version of Todd Motto's [Angular 2 Tesla Range Calculator Tutorial](https://toddmotto.com/building-tesla-range-calculator-angular-2-reactive-forms)
 
-This project was mapped to React from Todd Motto's [Angular 2 Tesla Range Calculator Tutorial](https://toddmotto.com/building-tesla-range-calculator-angular-2-reactive-forms)
+Why? Because I'm an avid car guy, with an Angular background, who is ramping up on React.
+
+Seemed fitting as a starter project. ¯\\\_(ツ)_/¯
+
+Tesla's offical range calculator can be found [here](https://www.tesla.com/models#range-calculator).
 
 # Deets
 
