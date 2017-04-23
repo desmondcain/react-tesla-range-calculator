@@ -14,9 +14,9 @@ class TeslaRangeCar extends Component {
 
     return (
       <div className="tesla-car">
-        <div className="tesla-wheels">
-          <div className={`tesla-wheel tesla-wheel-front tesla-wheel-${wheelSize}`}></div>
-          <div className={`tesla-wheel tesla-wheel-rear tesla-wheel-${wheelSize}`}></div>
+        <div className="tesla-car-wheels">
+          <div className={`tesla-car-wheel tesla-car-wheel-front tesla-car-wheel-${wheelSize}`}></div>
+          <div className={`tesla-car-wheel tesla-car-wheel-rear tesla-car-wheel-${wheelSize}`}></div>
         </div>
       </div>
     );
