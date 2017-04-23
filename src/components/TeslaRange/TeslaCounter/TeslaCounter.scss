@@ -5,6 +5,7 @@
   &-title {
     font-size: 16px;
     letter-spacing: 2px;
+    text-align: left;
   }
 
   &-container {
@@ -26,28 +27,21 @@
   &-number {
     font-size: 25px;
     font-weight: 400;
-    line-height: 25px;
-    position: relative;
+    line-height: 0;
 
     span {
       font-size: 15px;
-      left: 35px;
-      position: absolute;
       text-transform: uppercase;
-      top: 0;
     }
   }
 
   &-item {
     background-color: #f7f7f7;
-    background-position: 24.21053% 9px;
-    background-repeat: no-repeat;
-    background-size: 44px;
     border: 1px solid #ccc;
     display: inline-block;
-    height: 65px;
+    height: 35px;
     margin: 0 8px 0 0;
-    padding: 18px 0 0 30px;
+    padding: 18px 0;
     position: relative;
     width: 100%;
 
