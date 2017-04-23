@@ -14,9 +14,31 @@ class TeslaRange extends Component {
     super()
 
     this.calculateStats = this.calculateStats.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+    this.onChange = this.onChange.bind(this)
 
-    this.defaultSettings = { climate: true, speed: 55, temperature: 20, wheels: 19 }
-    this.stats = this.calculateStats(this.defaultSettings, TESLA_MODELS)
+    this.settings = { climate: true, speed: 55, temperature: 20, wheels: 19 }
+
+    this.state = {
+      settings: this.settings,
+      stats: this.calculateStats(this.settings, TESLA_MODELS)
+    }
+  }
+
+  componentWillMount() {
+    this.handlers = {}
+  }
+
+  handleChange(name) {
+    if (!this.handlers[name]) {
+      this.handlers[name] = (value) => { this.onChange(name, value) }
+    }
+    return this.handlers[name]
+  }
+
+  onChange(name, value) {
+    let settings = {...this.state.settings, [name]: value}
+    this.setState({settings: settings, stats: this.calculateStats(settings, TESLA_MODELS)});
   }
 
   calculateStats(settings, models) {
@@ -32,23 +54,31 @@ class TeslaRange extends Component {
   }
 
   render() {
-    const defaultSettings = this.defaultSettings
-    const stats = this.stats
+    const settings = this.state.settings
+    const stats = this.state.stats
 
     return (
       <div className="tesla-range">
         <TeslaRangeHeader />
-        <TeslaRangeCar wheelSize={defaultSettings.wheels} />
+        <TeslaRangeCar wheelSize={settings.wheels} />
         <TeslaStats stats={stats} />
 
         <div className="tesla-controlls">
-          <TeslaCounter title="Speed" unit="mph" step={5} min={45} max={70} />
+          <TeslaCounter
+            title="Speed"
+            unit="mph"
+            step={5}
+            min={45}
+            max={70}
+            value={settings.speed}
+            onChange={this.handleChange('speed')}
+          />
         </div>
 
         <div className="row">
           <p className="notice-range">
             The actual amount of range that you experience will vary based on your particular use conditions. See how particular use conditions may affect your range in our simulation model.
-            Vehicle range may vary depending on the vehicle configuration, battery age and condition, driving style and operating, environmental and climate conditions.
+            Vehicle range may vary depending on the vehicle settingsuration, battery age and condition, driving style and operating, environmental and climate conditions.
           </p>
         </div>
       </div>

@@ -1,13 +1,30 @@
 import React, { Component } from 'react';
-import { string, number } from 'prop-types';
+import { PropTypes } from 'prop-types';
 
 import './TeslaCounter.css'
 
 class TeslaCounter extends Component {
+  constructor() {
+    super()
+
+    this.increment = this.increment.bind(this)
+    this.decrement = this.decrement.bind(this)
+  }
+
+  increment() {
+    if (this.props.value < this.props.max) {
+      this.props.onChange(this.props.value + this.props.step)
+    }
+  }
+
+  decrement() {
+    if (this.props.value > this.props.min) {
+      this.props.onChange(this.props.value - this.props.step)
+    }
+  }
 
   render() {
-    let { max, min, step, title, unit } = this.props
-    let value;
+    let { max, min, title, unit, value } = this.props
 
     return (
       <div className="tesla-counter">
@@ -18,9 +35,10 @@ class TeslaCounter extends Component {
               {value}
               <span>{unit}</span>
             </p>
+
             <div className="tesla-counter-controls" tabIndex="-1">
-              <button tabIndex="-1"></button>
-              <button tabIndex="-1"></button>
+              <button type="button" onClick={this.increment} tabIndex="-1" disabled={value === max}></button>
+              <button type="button" onClick={this.decrement} tabIndex="-1" disabled={value === min}></button>
             </div>
           </div>
         </div>
@@ -30,12 +48,13 @@ class TeslaCounter extends Component {
 }
 
 TeslaCounter.propTypes = {
-  max: number.isRequired,
-  min: number.isRequired,
-  step: number.isRequired,
-  title: string.isRequired,
-  value: number.isRequired,
-  unit: string.isRequired,
+  max: PropTypes.number.isRequired,
+  min: PropTypes.number.isRequired,
+  step: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
+  unit: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
 }
 
 export default TeslaCounter;
