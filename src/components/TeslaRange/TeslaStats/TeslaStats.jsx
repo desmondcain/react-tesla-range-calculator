@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { array } from 'prop-types';
+import { PropTypes } from 'prop-types';
 
 import './TeslaStats.css';
 
 const propTypes = {
-  stats: array.isRequired
+  stats: PropTypes.array.isRequired
 }
 
 class TeslaStats extends Component {
