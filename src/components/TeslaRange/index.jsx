@@ -4,6 +4,7 @@ import TeslaRangeHeader from './TeslaRangeHeader/TeslaRangeHeader';
 import TeslaRangeCar from './TeslaRangeCar/TeslaRangeCar';
 import TeslaStats from './TeslaStats/TeslaStats';
 import TeslaCounter from './TeslaCounter/TeslaCounter';
+import TeslaClimate from './TeslaClimate/TeslaClimate';
 import TeslaWheels from './TeslaWheels/TeslaWheels';
 
 import './index.css';
@@ -85,6 +86,7 @@ class TeslaRange extends Component {
               value={settings.temperature}
               onChange={this.handleChange('temperature')}
             />
+            <TeslaClimate />
           </div>
 
           <TeslaWheels size={settings.wheels} onChange={this.handleChange('wheels')} />
