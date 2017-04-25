@@ -1,0 +1,63 @@
+.tesla-wheels {
+  float: left;
+  width: 355px;
+
+  &-title {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  &-container {
+    display: flex;
+    margin: 10px 0 0;
+  }
+
+  &-item {
+    background-color: #f7f7f7;
+    background-position: 24.21053% 10px;
+    background-repeat: no-repeat;
+    background-size: 44px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    margin: 0 8px 0 0;
+    padding: 12px 0 12px 90px;
+    width: 47%;
+
+    &-19 {
+      background-image: url(../../../images/wheels/19.svg);
+    }
+
+    &-21 {
+      background-image: url(../../../images/wheels/21.svg);
+    }
+
+    &-focused {
+      background-color: #f2f2f2;
+    }
+
+    &-active {
+      border-color: #39f;
+      box-shadow: inset 0px 0px 0px 1px #39f;
+    }
+
+    p {
+      color: #333;
+      font-size: 16px;
+      font-weight: 400;
+      margin: 11px 0;
+    }
+
+    input[type=radio] {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+}
