@@ -87,7 +87,7 @@ class TeslaRange extends Component {
             />
           </div>
 
-          <TeslaWheels />
+          <TeslaWheels size={settings.wheels} onChange={this.handleChange('wheels')} />
         </div>
 
         <div className="row">
