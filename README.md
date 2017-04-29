@@ -1,6 +1,6 @@
 # React Tesla Range Calculator
 
-####Demo:  [React Tesla Range Calculator](https://desmondcain.github.io/react-tesla-range-calculator)
+#### Demo:  [React Tesla Range Calculator](https://desmondcain.github.io/react-tesla-range-calculator)
 
 This is a React version of Todd Motto's [Angular 2 Tesla Range Calculator Tutorial](https://toddmotto.com/building-tesla-range-calculator-angular-2-reactive-forms)
 
