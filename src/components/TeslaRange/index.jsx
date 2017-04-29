@@ -19,7 +19,7 @@ class TeslaRange extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.onChange = this.onChange.bind(this)
 
-    this.settings = { climate: true, speed: 55, temperature: 20, wheels: 19 }
+    this.settings = { climate: false, speed: 55, temperature: 20, wheels: 19 }
 
     this.state = {
       settings: this.settings,
@@ -86,7 +86,8 @@ class TeslaRange extends Component {
               value={settings.temperature}
               onChange={this.handleChange('temperature')}
             />
-            <TeslaClimate />
+
+            <TeslaClimate limit={settings.temperature > 10} value={settings.climate} onChange={this.handleChange('climate')} />
           </div>
 
           <TeslaWheels size={settings.wheels} onChange={this.handleChange('wheels')} />
@@ -95,7 +96,6 @@ class TeslaRange extends Component {
         <div className="row">
           <div className="notice-range">
             <p>The actual amount of range that you experience will vary based on your particular use conditions. See how particular use conditions may affect your range in our simulation model.</p>
-
             <p>Vehicle range may vary depending on the vehicle settingsuration, battery age and condition, driving style and operating, environmental and climate conditions.</p>
           </div>
         </div>
