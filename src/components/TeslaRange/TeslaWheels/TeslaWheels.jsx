@@ -44,7 +44,7 @@ class TeslaWheels extends Component {
         <p className="tesla-wheels-title">Wheels</p>
         <div className="tesla-wheels-container cf">
           {wheels.map(wheel =>
-            <label key={wheel.id} className={classNames(`tesla-wheels-item tesla-wheels-item-${wheel.size}`, { 'tesla-wheels-item-active': value === wheel.size, '  tesla-wheels-item-focused': focus === wheel.size,})}>
+            <label key={wheel.id} className={classNames(`tesla-wheels-item tesla-wheels-item-${wheel.size}`, { 'tesla-wheels-item-active': value === wheel.size, 'tesla-wheels-item-focused': focus === wheel.size})}>
               <input type="radio" value={wheel.size} onFocus={this.onFocus} onChange={this.onChange} />
               <p>{wheel.size}"</p>
             </label>

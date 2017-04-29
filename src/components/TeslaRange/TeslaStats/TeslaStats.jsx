@@ -17,7 +17,7 @@ class TeslaStats extends Component {
         <ul>
           {stats.map(stat =>
             <li key={stat.model}>
-              <div className={`tesla-stats-icon tesla-stats-icon--${stat.model.toLowerCase()}`}></div>
+              <div className={`tesla-stats-icon tesla-stats-icon-${stat.model.toLowerCase()}`}></div>
               <p>{stat.miles}</p>
             </li>
           )}
